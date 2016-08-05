@@ -1,11 +1,6 @@
-angular.module('Todo', [])
-.controller('todoController', ['$scope', function($scope){
-  $scope.todos = [
-    {
-      'title': 'Build a todo app',
-      'done': false
-    }
-  ];
+var app = angular.module('Todo', []);
+app.controller('todoController', ['$scope', function($scope){
+  $scope.todos = [];
 
   $scope.addTodo = function(){
     $scope.todos.push({
